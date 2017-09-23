@@ -7,16 +7,21 @@ import java.util.Scanner;
 public class Program {
 
     public static void DisplayResult(String str1, String str2){
-        System.out.println(str1 + " " + str2);
+        System.out.println(str1 + str2);
     }
 
     public static void DisplayResult(String str1, int age){
-        System.out.println(str1 + " " + age);
+        System.out.println(str1 + age);
     }
 
     public static void DisplayResult(String str1, String str2, int age, String str3){
         System.out.printf("Человек по имени %s живёт в городе %s " +
                 "Этому человеку %d лет и любит он заниматься %s.", str1, str2, age, str3);
+        System.out.println();
+    }
+
+    public static void DisplayResult(int age, String str1){
+        System.out.println(age + str1);
     }
 
     public static void main(String[] args) {
@@ -42,15 +47,22 @@ public class Program {
 
         System.out.println("-----------------------------");
         System.out.println("Вариант 1 (табличный)");
-        DisplayResult("Имя:", name);
-        DisplayResult("Город:", city);
-        DisplayResult("Возраст:", age);
-        DisplayResult("Хобби:", hobby);
+        DisplayResult("Имя: ", name);
+        DisplayResult("Город: ", city);
+        DisplayResult("Возраст: ", age);
+        DisplayResult("Хобби: ", hobby);
 
         System.out.println("-----------------------------");
         System.out.println("Вариант 2 (текстовый)");
         DisplayResult(name, city, age, hobby);
 
+        System.out.println("-----------------------------");
+        System.out.println("Вариант 3 (иной)");
+        DisplayResult(name, " - имя");
+        DisplayResult(city, " - город");
+        DisplayResult(age, " - возраст");
+        DisplayResult(hobby, " - хобби");
+        System.out.println("-----------------------------");
 
 
     }
